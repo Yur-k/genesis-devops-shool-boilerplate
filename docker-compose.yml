@@ -19,7 +19,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    restart: always
+    restart: on-failure:10
     volumes:
       - .:/app
     env_file: .env
